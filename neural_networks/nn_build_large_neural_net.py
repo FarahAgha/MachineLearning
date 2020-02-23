@@ -106,7 +106,7 @@ img = images[img_idx]
 helper.view_classify(img.view(1, 28, 28), ps)
 
 # Using nn.Sequential  to build the equivalent network:
-
+# https://pytorch.org/docs/master/nn.html#torch.nn.Sequential
 # Hyperparameters for our network
 input_size = 784
 hidden_sizes = [128, 64]

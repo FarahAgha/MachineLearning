@@ -1,4 +1,4 @@
-#inference_n_validation
+#reduce_overfitting_inference_n_validation
 import torch
 from torchvision import datasets, transforms
 
@@ -171,8 +171,7 @@ for e in range(epochs):
               "Test Loss: {:.3f}.. ".format(test_loss/len(testloader)),
               "Test Accuracy: {:.3f}".format(accuracy/len(testloader)))
 
-        
-
+#########Inference
 # Import helper module (should be in the repo)
 import helper
 
@@ -194,6 +193,31 @@ ps = torch.exp(output)
 
 # Plot the image and probabilities
 helper.view_classify(img.view(1, 28, 28), ps, version='Fashion')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

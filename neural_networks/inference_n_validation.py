@@ -32,7 +32,7 @@ class Classifier(nn.Module):
         x = F.relu(self.fc2(x))
         x = F.relu(self.fc3(x))
         x = F.log_softmax(self.fc4(x), dim=1)
-        
+          
         return x
 
 model = Classifier()

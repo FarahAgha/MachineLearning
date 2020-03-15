@@ -7,7 +7,7 @@ import os
 
 def main():
     
-    
+    print("USAGE: \n python ./predict.py flowers/test/10/image_07090.jpg classify_model_03082020_181823.pth --top_k 5")
     parser = get_args()
     
     cli_args = parser.parse_args()

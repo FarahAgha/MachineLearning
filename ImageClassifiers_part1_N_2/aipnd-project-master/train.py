@@ -20,19 +20,23 @@ from cli_train_args import get_args
 
 
 def main():
+
+    print("USAGE:\n python train.py flowers --save_dir . --arch "vgg13" --learning_rate 0.01 --hidden_units 512 --epochs 20 --gpu")
+    
     parser = get_args()
     
     cli_args = parser.parse_args()
 
+    # Not working in Udcity terminal. workes locally
     # check for data directory
-    if not os.path.isdir(cli_args.data_directory):
-        print(f'Data directory {cli_args.data_directory} was not found.')
-        exit(1)
+    # if not os.path.isdir(cli_args.data_directory):
+    #     print(f'Data directory {cli_args.data_directory} was not found.')
+    #     exit(1)
 
-    # check for save directory
-    if not os.path.isdir(cli_args.save_dir):
-        print(f'Directory {cli_args.save_dir} does not exist. Creating...')
-        os.makedirs(cli_args.save_dir)
+    # # check for save directory
+    # if not os.path.isdir(cli_args.save_dir):
+    #     print(f'Directory {cli_args.save_dir} does not exist. Creating...')
+    #     os.makedirs(cli_args.save_dir)
 
     data_dir = cli_args.data_directory
     train_dir = data_dir + '/train'
